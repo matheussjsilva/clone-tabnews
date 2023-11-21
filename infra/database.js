@@ -15,5 +15,5 @@ async function query(queryObject) {
 }
 
 export default {
-  query: process.env.POSTGRES_,
+  query: query,
 };
