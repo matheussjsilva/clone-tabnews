@@ -1,4 +1,3 @@
-import { getVersion } from "jest";
 import { Client } from "pg";
 
 async function query(queryObject) {
@@ -36,11 +35,12 @@ async function getNewClient() {
   return client;
 }
 
-export default {
+const database = {
   query,
   getVersion: getVersionDB,
   getNewClient,
 };
+export default database;
 
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
